@@ -1,0 +1,15 @@
+module.exports = {
+  MSG_BAD_REQUEST: 'Dados inválidos.',
+  MSG_UNAUTHORIZED: 'Autorização necessária.',
+  MSG_WRONG_CREDENTIALS: 'E-mail ou senha incorretos.',
+  MSG_FORBIDDEN: 'Você não tem permissão para excluir este artigo.',
+  MSG_USER_NOT_FOUND: 'Usuário não encontrado.',
+  MSG_ARTICLE_NOT_FOUND: 'Artigo não encontrado.',
+  MSG_ROUTE_NOT_FOUND: 'Recurso solicitado não encontrado.',
+  MSG_EMAIL_CONFLICT: 'Este e-mail já está cadastrado.',
+  MSG_INVALID_EMAIL: 'E-mail inválido.',
+  MSG_INVALID_URL: 'URL inválida.',
+  MSG_SERVER_ERROR: 'Ocorreu um erro no servidor.',
+  MSG_TOO_MANY_REQUESTS: 'Muitas requisições. Tente novamente mais tarde.',
+  MSG_ARTICLE_DELETED: 'Artigo removido.',
+};
