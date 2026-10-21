@@ -9,7 +9,7 @@ const isProduction = NODE_ENV === 'production';
 module.exports = {
   isProduction,
   port: PORT || 3000,
-  mongoUrl: isProduction && MONGO_URL ? MONGO_URL : 'mongodb://127.0.0.1:27017/news-explorer-db',
+  mongoUrl: MONGO_URL || 'mongodb://127.0.0.1:27017/news-explorer-db',
   jwtSecret: isProduction && JWT_SECRET ? JWT_SECRET : 'dev-secret-nao-usar-em-producao',
   jwtExpiresIn: '7d',
   allowedOrigins: isProduction && ALLOWED_ORIGINS
