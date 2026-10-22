@@ -2,18 +2,18 @@
 
 API REST do projeto final News Explorer (TripleTen). Node.js + Express + MongoDB.
 
-**Domínio público da API:** _(preencher após o deploy, ex.: https://api.seudominio.com)_
+**Domínio público da API:** https://api-israel-news.duckdns.org
 
 ## Rotas
 
-| Método | Rota | Auth | Descrição |
-|---|---|---|---|
-| POST | `/signup` | não | Cria usuário (`email`, `password`, `name`) |
-| POST | `/signin` | não | Retorna `{ token }` (JWT) |
-| GET | `/users/me` | sim | E-mail e nome do usuário logado |
-| GET | `/articles` | sim | Artigos salvos do usuário |
-| POST | `/articles` | sim | Salva artigo (`keyword`, `title`, `text`, `date`, `source`, `link`, `image`) |
-| DELETE | `/articles/:articleId` | sim | Remove um artigo (somente o dono) |
+| Método | Rota                   | Auth | Descrição                                                                    |
+| ------ | ---------------------- | ---- | ---------------------------------------------------------------------------- |
+| POST   | `/signup`              | não  | Cria usuário (`email`, `password`, `name`)                                   |
+| POST   | `/signin`              | não  | Retorna `{ token }` (JWT)                                                    |
+| GET    | `/users/me`            | sim  | E-mail e nome do usuário logado                                              |
+| GET    | `/articles`            | sim  | Artigos salvos do usuário                                                    |
+| POST   | `/articles`            | sim  | Salva artigo (`keyword`, `title`, `text`, `date`, `source`, `link`, `image`) |
+| DELETE | `/articles/:articleId` | sim  | Remove um artigo (somente o dono)                                            |
 
 Rotas protegidas exigem o cabeçalho `Authorization: Bearer <token>`.
 
