@@ -2,7 +2,7 @@ const { celebrate, Joi } = require('celebrate');
 const validator = require('validator');
 const { MSG_INVALID_URL } = require('../constants');
 
-const urlRule = Joi.string().required().custom((value, helpers) => {
+const urlRule = Joi.string().custom((value, helpers) => {
   if (validator.isURL(value)) return value;
   return helpers.message(MSG_INVALID_URL);
 });
@@ -29,8 +29,8 @@ module.exports.validateArticle = celebrate({
     text: Joi.string().required(),
     date: Joi.string().required(),
     source: Joi.string().required(),
-    link: urlRule,
-    image: urlRule,
+    link: urlRule.required(),
+    image: urlRule.required(),
   }),
 });
 
