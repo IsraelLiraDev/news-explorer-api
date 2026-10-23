@@ -11,5 +11,6 @@ module.exports = {
   MSG_INVALID_URL: 'URL inválida.',
   MSG_SERVER_ERROR: 'Ocorreu um erro no servidor.',
   MSG_TOO_MANY_REQUESTS: 'Muitas requisições. Tente novamente mais tarde.',
+  MSG_SEARCH_UNAVAILABLE: 'Não foi possível buscar notícias agora.',
   MSG_ARTICLE_DELETED: 'Artigo removido.',
 };

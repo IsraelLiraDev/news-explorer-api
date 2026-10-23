@@ -1,7 +1,7 @@
 require('dotenv').config({ quiet: true });
 
 const {
-  NODE_ENV, JWT_SECRET, MONGO_URL, PORT, ALLOWED_ORIGINS,
+  NODE_ENV, JWT_SECRET, MONGO_URL, PORT, ALLOWED_ORIGINS, NEWS_API_KEY,
 } = process.env;
 
 const isProduction = NODE_ENV === 'production';
@@ -12,6 +12,10 @@ module.exports = {
   mongoUrl: MONGO_URL || 'mongodb://127.0.0.1:27017/news-explorer-db',
   jwtSecret: isProduction && JWT_SECRET ? JWT_SECRET : 'dev-secret-nao-usar-em-producao',
   jwtExpiresIn: '7d',
+  newsApiKey: NEWS_API_KEY,
+  newsApiUrl: 'https://newsapi.org/v2/everything',
+  searchDaysRange: 7,
+  searchPageSize: 100,
   allowedOrigins: isProduction && ALLOWED_ORIGINS
     ? ALLOWED_ORIGINS.split(',').map((origin) => origin.trim())
     : ['http://localhost:5173', 'http://localhost:3001'],

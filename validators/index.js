@@ -39,3 +39,10 @@ module.exports.validateArticleId = celebrate({
     articleId: Joi.string().hex().length(24).required(),
   }),
 });
+
+module.exports.validateSearch = celebrate({
+  query: Joi.object().keys({
+    keyword: Joi.string().trim().required().min(1)
+      .max(100),
+  }),
+});
